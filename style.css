@@ -114,6 +114,7 @@ body {
 
 .tooltip__container {
   position: relative;
+  display: inline-block;
 }
 
 .share__button {
