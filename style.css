@@ -114,7 +114,6 @@ body {
 
 .tooltip__container {
   position: relative;
-  z-index: 5;
 }
 
 .share__button {
