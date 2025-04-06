@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- style-sheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- font-family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <body>
+    <main class="card">
+      <section class="card__banner">
+        <img src="./images/drawers.jpg" alt="drawers image" />
+      </section>
+
+      <article class="card__info">
+        <h1 class="heading">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p class="description">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="author">
+          <div class="author__metadata">
+            <img
+              src="./images/avatar-michelle.jpg"
+              alt="author image"
+              class="author__avatar"
+            />
+            <div class="author__info">
+              <span class="author__info-name">Michelle Appleton</span>
+              <span class="author__info-date">28 Jun 2020</span>
+            </div>
+          </div>
+          <div class="tooltip__container">
+            <button class="share__button" id="btn">
+              <img src="./images/icon-share.svg" alt="share button icon" />
+            </button>
+            <div class="tooltip__box" id="tooltip">
+              <span>SHARE</span>
+              <a href="#">
+                <img src="./images/icon-facebook.svg" alt="facebook icon" />
+              </a>
+              <a href="#">
+                <img src="./images/icon-twitter.svg" alt="twitter icon" />
+              </a>
+              <a href="#">
+                <img src="./images/icon-pinterest.svg" alt="pinterest icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/cole319?tab=repositories" target="_blank"
+        >Suryarghya</a
+      >.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

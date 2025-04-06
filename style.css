@@ -1,0 +1,356 @@
+/* Global */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grayish-blue-300: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue-200: hsl(212, 23%, 69%);
+  --grayish-blue-100: hsl(212, 68%, 95%);
+}
+
+/* Body */
+
+body {
+  background-color: var(--grayish-blue-100);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+}
+
+.card {
+  display: flex;
+  background-color: white;
+  width: 56%;
+  box-shadow: 4px 4px 15px var(--grayish-blue-200);
+  border-radius: 0.8rem;
+}
+
+.card__banner {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__banner img {
+  height: 100%;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.card__info {
+  width: 60%;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.card__info h1 {
+  font-size: 1.4rem;
+  color: var(--grayish-blue-300);
+}
+
+.card__info p {
+  font-size: 0.9rem;
+  color: var(--grayish-blue-300);
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.6rem;
+}
+
+.author__metadata {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.author__avatar {
+  border-radius: 100%;
+  height: 2.5rem;
+}
+
+.author__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.author__info-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--grayish-blue-300);
+}
+
+.author__info-date {
+  font-size: 0.9rem;
+  color: var(--grayish-blue-200);
+}
+
+.share__btn:hover {
+  background-color: var(--grayish-blue-300);
+  color: var(--grayish-blue-100);
+}
+
+/* Tooltip */
+
+.tooltip__container {
+  position: relative;
+  z-index: 5;
+}
+
+.share__button {
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 100%;
+  background-color: var(--grayish-blue-100);
+  color: var(--grayish);
+}
+
+.share__button:hover {
+  background-color: var(--grayish-blue-300);
+}
+
+.tooltip__box {
+  position: absolute;
+  bottom: 170%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  padding: 1.1rem 2.5rem 1.1rem 2.5rem;
+  background-color: var(--grayish-blue-300);
+  color: var(--grayish-blue-100);
+  text-align: center;
+  border-radius: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tooltip__box span {
+  color: var(--grayish-blue-200);
+  letter-spacing: 0.3rem;
+  font-size: 0.7rem;
+}
+
+.tooltip__box a {
+  height: 1rem;
+}
+
+.tooltip__box a img {
+  height: 100%;
+}
+
+.tooltip__box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.6rem;
+  border-style: solid;
+  border-color: var(--grayish-blue-300) transparent transparent transparent;
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 4rem;
+}
+
+.attribution a {
+  color: var(--grayish-blue-300);
+}
+
+/* Media Query */
+
+@media screen and (max-width: 500px) {
+  .card,
+  .card * {
+    max-width: 100%;
+    /* overflow-wrap: break-word; */
+  }
+  .card {
+    margin-top: 4rem;
+    flex-direction: column;
+    width: 90%;
+    height: 70vh;
+  }
+
+  .card__banner {
+    width: 100%;
+    /* position: relative;
+    overflow: hidden; */
+    height: 40%;
+  }
+
+  .card__banner img {
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.8rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .card__info {
+    width: 100%;
+    padding: 2.5rem;
+    height: 60%;
+    overflow-y: auto;
+  }
+
+  .card__info h1 {
+    font-size: 1rem;
+  }
+
+  .card__info p {
+    font-size: 0.8rem;
+  }
+
+  .tooltip__box {
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem 0rem 2rem 0rem;
+    min-width: 5rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .card,
+  .card * {
+    max-width: 100%;
+    /* overflow-wrap: break-word; */
+  }
+  .card {
+    margin-top: 4rem;
+    flex-direction: column;
+    width: 60%;
+    height: 70vh;
+  }
+
+  .card__banner {
+    width: 100%;
+    /* position: relative;
+    overflow: hidden; */
+    height: 40%;
+  }
+
+  .card__banner img {
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.8rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .card__info {
+    width: 100%;
+    padding: 2.5rem;
+    height: 60%;
+    overflow-y: auto;
+  }
+
+  .card__info h1 {
+    font-size: 1rem;
+  }
+
+  .card__info p {
+    font-size: 0.8rem;
+  }
+
+  .tooltip__box {
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem 0rem 2rem 0rem;
+    min-width: 5rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  .card,
+  .card * {
+    max-width: 100%;
+    /* overflow-wrap: break-word; */
+  }
+  .card {
+    margin-top: 4rem;
+    flex-direction: column;
+    width: 40%;
+    height: 70vh;
+  }
+
+  .card__banner {
+    width: 100%;
+    /* position: relative;
+    overflow: hidden; */
+    height: 40%;
+  }
+
+  .card__banner img {
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.8rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .card__info {
+    width: 100%;
+    padding: 2.5rem;
+    height: 60%;
+    overflow-y: auto;
+  }
+
+  .card__info h1 {
+    font-size: 1rem;
+  }
+
+  .card__info p {
+    font-size: 0.8rem;
+  }
+
+  .tooltip__box {
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2rem 0rem 2rem 0rem;
+    min-width: 5rem;
+    gap: 2rem;
+  }
+}
