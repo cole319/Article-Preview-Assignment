@@ -194,7 +194,6 @@ body {
   .card,
   .card * {
     max-width: 100%;
-    /* overflow-wrap: break-word; */
   }
   .card {
     margin-top: 4rem;
@@ -205,8 +204,6 @@ body {
 
   .card__banner {
     width: 100%;
-    /* position: relative;
-    overflow: hidden; */
     height: 40%;
   }
 
@@ -249,7 +246,6 @@ body {
   .card,
   .card * {
     max-width: 100%;
-    /* overflow-wrap: break-word; */
   }
   .card {
     margin-top: 4rem;
@@ -260,8 +256,6 @@ body {
 
   .card__banner {
     width: 100%;
-    /* position: relative;
-    overflow: hidden; */
     height: 40%;
   }
 
@@ -304,7 +298,6 @@ body {
   .card,
   .card * {
     max-width: 100%;
-    /* overflow-wrap: break-word; */
   }
   .card {
     margin-top: 4rem;
@@ -315,8 +308,6 @@ body {
 
   .card__banner {
     width: 100%;
-    /* position: relative;
-    overflow: hidden; */
     height: 40%;
   }
 
